@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :rates
   resources :sales
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   get 'home/index'
-  resources :users
+   resources :users, only: [:index]
   resources :pokemons
   root to: "home#index"
   get 'welcome/inde'

@@ -4,4 +4,10 @@
     <%= user.name %>
   </p>
 
+  <% if user.avatar.attached? %>
+ <p>
+    <strong>Image:</strong>
+    <%= image_tag user.avatar %>
+  </p>
+ <%end%> 
 </div>
