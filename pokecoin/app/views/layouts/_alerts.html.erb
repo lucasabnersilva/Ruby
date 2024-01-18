@@ -1,12 +1,20 @@
   <%if notice %>
-<p class="alert alert-info" role="alert">
-    <%= notice %>
+
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+  <%= notice %>
 </p>
            
 <%  end   %>
 
-  <%if alert %>
-<p class="alert alert-danger" role="alert">
-    <%= alert %>
-</p>
+ <%if notice %>
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    An example danger alert with an icon
+  </div>
+</div>
+ <%= notice %>
+
 <%  end   %>
